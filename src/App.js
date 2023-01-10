@@ -7,9 +7,10 @@ import Navigation from './Navigation';
 
 function App() {
   return (
-  <div className='App'>
-    <Navigation/>
-    <Form/>
+    <div className='App'>
+      <Navigation />
+      <Form />
+
     </div>
   );
 }

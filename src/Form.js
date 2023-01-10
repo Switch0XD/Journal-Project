@@ -1,60 +1,85 @@
-import React  from "react";  
+import React from "react";
 import "./components/Loginform"
 
-function Form(){
-    return(
-        <div className="cover">
-        <div className="Form_container" >
-        <h2 >Faculty Awards/Recognitations/Fellowships</h2>
-        </div>
-        <br></br><br></br>
-        <form>
-        <div>
-        <div>
-        <label className="Ach">Achivement Type
-        </label>
-        <select className="Achivement">
-  <option value="Achivement 1">Achivement 1</option>
-  <option value="Achivement 2">Achivement 2</option>
-  <option value="Achivement 3">Achivement 3</option>
-  <option value="Achivement 4">Achivement 4</option>
-    </select>
-    </div>
-   <br/>
-   <br/>
+function Form() {
+  return (
 
-    <div>
-    <label>Achivement Level
-        </label>
-     <select>
-  <option value="Achivement Level 1">Achivement Level 1</option>
-  <option value="Achivement Level 2">Achivement Level 2</option>
-  <option value="Achivement Level 3">Achivement Level 3</option>
-  <option value="Achivement Level 4">Achivement Level 4</option>
-    </select>
-    </div>
-    </div>
-    <br/>
-   <br/>
+    <div className="Form">
+      <div className="AwardForm">
+        <form action="submit" method="post">
+          <label htmlFor="">Achievement Type</label>
+          <select name="AchievementType" id="AchievementType-select">
+            <option value="">--Please choose Achievement Type--</option>
+            {/* <option value="Award">Award</option> */}
+            <option value="Innovation Award">Innovation Award</option>
+            <option value="Recognition">Recognition</option>
+            <option value="Fellowship">Fellowship</option>
+          </select>
 
-    <label>Organization Type
-        </label>
-     <select>
-  <option value="Organization Type 1">Organization Type 1</option>
-  <option value="Organization Type 2">Organization Type 2</option>
-  <option value="Organization Type 3">Organization Type 3</option>
-  <option value="Organization Type 4">Organization Type 4</option>
-    </select>
-    <div>
-    <br/>
-    <br/>
-    <label>Organization Name
-    </label>
-    <input type="text" ></input>
-   </div>
+          {/* Achievement level Dropdown list */}
+
+          <label htmlFor="">Achievement Level</label>
+          <select name="AchievementLevel" id="AchievementLevel-select">
+            <option value="">--Please choose Achievement Level--</option>
+            <option value="State">State</option>
+            <option value="National">National</option>
+            <option value="International">International</option>
+          </select><br />
+          {/* Calendar of Awards */}
+          <label htmlFor="">Award Date</label>
+
+          <input type="date" id="start" name="trip-start"
+            value=""
+            min="1800-01-01" /> <br />
+          {/* Organization type drop downlist */}
+          <label htmlFor="">Organization Type</label>
+          <select name="OrgType" id="OrgType-Select">
+            <option value="">--Please choose Organization Type--</option>
+            <option value="Government">Government</option>
+            <option value="Private">Private</option>
+          </select><br />
+          {/* Organization Name List */}
+          <label htmlFor="">Organization Name</label>
+          <input type="text" /><br />
+          {/* Radio btn for Recognition from VIT */}
+          <label htmlFor="">Have you received any incentive by VIT in recognition of the award</label>
+          <div className="RadioBtn1">
+            <input type="radio" id="YesForm" /><br />
+            <label className="YesRadioBtn">YES</label><br />
+          </div>
+          <div className="RadioBtn2"><input type="radio" id="NoForm" /><br />
+            <label className="NoRadioBtn">NO</label>
+          </div>
+
+
+          <br />
+          {/* Upload proof  */}
+          <label className="FileUpload">Awarded/Recognition/Fellowship Proof Upload</label>
+          <input type="file" />
+
+          {/* Submit Btn */}
+          <input type="button" value="👉Click here to Submit" />
         </form>
-        </div>
-    );
+      </div>
+      <div className="AwardTable">
+        <label className="AwardTableHeading">FACULTY AWARDS/RECOGNITIONS/FELLOWSHIPS</label>
+        <table className="InnerTable">
+          <thead className="TableHead"><tr>
+            <th>#</th>
+            <th>Achievement Type</th>
+            <th>Achievement Level</th>
+            <th>Awarded Date</th>
+            <th>Organization Type</th>
+            <th>Organization Name</th>
+            <th>Any Incentives</th>
+            <th>Incentives Description</th>
+            <th>Action</th>
+          </tr></thead>
+          <td></td>
+        </table>
+      </div>
+    </div>
+  );
 }
 
 export default Form;
