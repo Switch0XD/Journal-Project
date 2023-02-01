@@ -157,3 +157,19 @@ nav ul li {
 
 
 }
+
+
+.main_div {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.login_div {
+
+  width: 900px;
+  object-fit: contain;
+
+}
