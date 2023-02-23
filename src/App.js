@@ -1,15 +1,13 @@
-
-import './App.css';
-import Form from './Form';
+import FacultyAwardsForm from './FacultyAwardsForm';
 import './components/Loginform';
-import "./Navigation";
-import Navigation from './Navigation';
+import "./NavBar";
+import NavBar from './NavBar';
 
 function App() {
   return (
-  <div className='App'>
-    <Navigation/>
-    <Form/>
+    <div className='App'>
+      <NavBar />
+      <FacultyAwardsForm />
     </div>
   );
 }

@@ -1,10 +1,11 @@
 .App {
-  text-align: center;
+  display: inline;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  align-items: flex-start;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -32,7 +33,70 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
+
+form {
+  display: inline-block;
+
+}
+
+.Form {
+
+  display: inline-block;
+  text-align: center;
+
+}
+
+
+.AwardForm {
+
+  font: 1rem 'Fira Sans', sans-serif;
+  font-family: sans-serif;
+  font-size: 1rem;
+  padding-right: 10px;
+  border-bottom: 100px;
+  padding-bottom: 100px;
+}
+
+
+
+input,
+.AwardForm {
+  align-items: center;
+  margin: 0.4rem 0;
+}
+
+.RadioBtn1,
+.RadioBtn2 {
+
+  display: inline-block;
+  padding: 1%;
+  height: 5%;
+}
+
+#YesForm,
+#NoForm {
+  height: 5%;
+}
+
+.YesRadioBtn,
+.NoRadioBtn {
+  font-size: small;
+}
+
+.FileUpload {
+  text-align: ri;
+}
+
+
+/* New css for formFaculty */
+
+
+
+
+
+/* Award Table Styling  */
