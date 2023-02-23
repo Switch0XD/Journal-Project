@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDom from "react-dom";
 import Loginform from "./components/Loginform";
-import Form from "./Form";
+import FacultyAwardsForm from "./FacultyAwardsForm";
 import App from "./App"
-import Navigation from './Navigation';
+import NavBar from './NavBar';
 
-ReactDom.render(<App/>,document.getElementById("root"));
+ReactDom.render(<App />, document.getElementById("root"));
 
