@@ -1,92 +1,107 @@
 * {
-  margin: 0;
-  box-sizing: border-box;
-  justify-content: center;
-  align-items: center;
-
+    margin:0;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items:center;
+    
 }
 
-.page {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.page{
+    height:100vh;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
 }
 
-input {
-  border: none;
-  background-color: rgb(229, 226, 226);
-  height: 3em;
-  width: 80%;
-  border-radius: 0.25em;
-}
+   input{
+    border: none;
+    background-color:rgb(229,226,226);
+    height: 3em;
+    width:80%;
+    border-radius:0.25em;
+   }
+   input:focus{
+    outline-color:(32,177,255);
+   }
 
-input:focus {
-  outline-color: (32, 177, 255);
-}
+   select{
+    border: none;
+    background-color:rgb(229,226,226);
+    height: 2em;
+    width:80%;
+    border-radius:0.25em;
+    justify-content: space-around;
+    flex: 0 0 200px;
+    margin-left: 10px;
+  
 
-select {
-  border: none;
-  background-color: rgb(229, 226, 226);
-  height: 2em;
-  width: 80%;
-  border-radius: 0.25em;
-  justify-content: space-around;
-  flex: 0 0 200px;
-  margin-left: 10px;
-
-
-}
-
-select:focus {
-  outline-color: (32, 177, 255);
-}
-
-
-
-a.active,
-a:hover {
-  background: #1b9bff;
-  transition: .5s;
-}
-
-label.logo {
-  color: white;
-  font-size: 35px;
+   }
+   select:focus{
+    outline-color:(32,177,255);
+   }
+   nav{
+    background: #0082e6;
+    height:80px;
+   }
+   nav ul{
+    float:right;
+    margin:20px;
+    color: white;
+    font-size: 20px;
+    line-height:80px;
+   }
+   nav ul li{
+  display: inline-block;
   line-height: 80px;
-  font-weight: bold;
-  float: center;
-  padding-left: 125px;
+  margin: 0 5px;
+
+ }
+ nav ul li a{
+    color: white;
+    font-size:17px ;
+    text-transform: uppercase;
+ }
+a.active,a:hover{
+    background: #1b9bff;
+    transition: .5s;
 }
 
-.cover {
+   label.logo{
+    color:white;
+    font-size:35px;
+    line-height: 80px;
+    font-weight:bold;
+    float: left;
+   }
+   .cover{
+    
+   
+    align-items: center;
+    justify-content: space-around;
+   }
 
+   select.Achivement{
+    justify-content: space-between;
+   }
+   label.Ach{
+    justify-content: space-around;
+   }
 
-  align-items: center;
-  justify-content: space-around;
-}
-
-
-label.Ach {
-  justify-content: space-around;
-}
-
-label {
-
-  flex-direction: row;
-  justify-content: flex-end;
-  text-align: right;
-  width: 400px;
-  line-height: 26px;
-  margin-bottom: 10px;
-}
-
-.form_container {
-  align-items: center;
-}
-
-input {
+   label {
+    
+    flex-direction: row;
+    justify-content: flex-end;
+    text-align: right;
+    width: 400px;
+    line-height: 26px;
+    margin-bottom: 10px;
+  }
+ .form_container{
+    align-items: center;
+ }
+  
+  input {
   height: 20px;
   flex: 0 0 200px;
   margin-left: 10px;
