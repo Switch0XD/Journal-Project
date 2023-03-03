@@ -1,0 +1,314 @@
+/* Navigation bar  */
+
+.navbar {
+  background-color: rgb(36, 85, 163);
+  background: linear-gradient(130deg, rgba(36, 85, 163, 1) 23%, rgba(52, 151, 219, 1) 52%, rgba(52, 142, 219, 1) 58%, rgba(52, 131, 219, 1) 65%, rgba(40, 116, 166, 1) 74%);
+  padding: 0.5cm;
+}
+
+/* VIT LOGO image */
+
+.logo img {
+  float: left;
+  width: 100%;
+  aspect-ratio: 3/2;
+  object-fit: contain;
+  mix-blend-mode: screen;
+}
+
+.logo {
+  width: 11%;
+}
+
+nav {
+  /* background-color: blue; */
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0px;
+}
+
+nav img {
+  height: 100%;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+html {
+  background-image: url(./img/240_F_500002650_DNXWdhS0XZvFfCvNzcBnFBSAx3H3n22X.jpg);
+  background-repeat: no-repeat;
+  background-size: 260vh;
+  height: 100%;
+  width: 100%;
+}
+
+
+/* .login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+} */
+
+/* Journal portal heading  */
+.TitleLogin {
+  /* background-color: blue; */
+  width: 25%;
+  height: 10%vh;
+  margin-left: 38%;
+  display: flex;
+  justify-content: center;
+}
+
+.fw-bold {
+  height: 100%;
+  width: 100%;
+}
+
+.fw-bold h2 {
+  /* display: inline-flexbox;
+  
+  font-size: large;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold; */
+  /* text-align: center; */
+  font-family: inherit;
+
+}
+
+/* login form  */
+
+.LoginForm {
+  width: 70vh;
+  height: 10vh;
+
+
+}
+
+
+
+.LoginForm form {
+  /* background-color: #f5f5f5; */
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+
+  background: transparent;
+  border: 3px solid rgb(44, 113, 232);
+  border-style: groove;
+
+}
+
+/* Input tags of login page*/
+
+input[type=text] {
+  width: 22vh;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid rgb(171, 194, 232);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+input {
+  /* padding: 12px 20px; */
+}
+
+input[type=text]:focus {
+  border: 3px solid rgb(44, 113, 232);
+}
+
+input[type=password] {
+  width: 22vh;
+
+  /* margin: 8px 0; */
+  box-sizing: border-box;
+  border: 3px solid rgb(171, 194, 232);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+input[type=password]:focus {
+  border: 3px solid rgb(44, 113, 232);
+}
+
+input[type=text]::placeholder {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+input[type=password]::placeholder {
+  color: rgba(232, 219, 171, 0.677);
+  font-size: medium;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+
+}
+
+label {
+  /* margin-bottom: 10px;
+  width: 25%; */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: left;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.has-error {
+  border-color: red;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+
+/* Captcha styling */
+
+.Captcha {
+  display: block;
+  width: 1px;
+
+  height: 2px;
+  float: left;
+  aspect-ratio: 1/2;
+  /* object-fit: contain; */
+
+}
+
+
+button {
+  background-color: rgb(44, 113, 232);
+
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  width: 2.5cm;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: linear-gradient(130deg,
+      rgba(36, 85, 163, 1) 23%,
+      rgba(52, 151, 219, 1) 52%,
+      rgba(52, 142, 219, 1) 58%,
+      rgba(52, 131, 219, 1) 65%,
+      rgba(40, 116, 166, 1) 74%);
+  ;
+}
+
+.forgot-password {
+  margin-top: 10px;
+  color: blue;
+  text-decoration: none;
+}
+
+
+
+
+
+.form-container {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+
+.has-error {
+  border: 1px solid red;
+}
+
+.error-message {
+  color: red;
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.forgot-password {
+  color: blue;
+  text-decoration: none
+}
+
+
+
+
+footer {
+  background-color: rgb(36, 85, 163) grad;
+  background: linear-gradient(130deg,
+      rgba(36, 85, 163, 1) 23%,
+      rgba(52, 151, 219, 1) 52%,
+      rgba(52, 142, 219, 1) 58%,
+      rgba(52, 131, 219, 1) 65%,
+      rgba(40, 116, 166, 1) 74%);
+  margin-top: auto;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+
+
+/* .card-header:first-child {}
+
+.loginBoxBorder {}
+
+.card-header {}
+
+.card-header loginBoxBorder {
+  align-content: center;
+  display: inline;
+
+} */
+
+/* .TitleLogin {
+  border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+  border-width: 3px 0px 0px 0px;
+  border-style: solid;
+  border-color: rgb(92, 172, 218);
+  padding: 0.5rem 1rem;
+  margin-bottom: 0;
+  background-color: rgba(0, 0, 0, .03);
+  border-bottom: 1px solid rgba(0, 0, 0, .125);
+  display: inline;
+  align-items: center;
+} */
