@@ -1,5 +1,6 @@
 import Captcha from 'captcha-image';
-import './LoginPage.css'
+import './Styles/LoginPage.css';
+
 const captchaImage = new Captcha(
   '35px Arial',
   'center',

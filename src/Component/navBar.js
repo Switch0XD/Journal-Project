@@ -1,32 +1,6 @@
-// import React from "react";
-// import "./components/Loginform"
-
-
-
-// function Navigation() {
-//   return (
-//     <div className='NavBar'>
-//       <nav className="main-nav">
-//         <div className="logo">
-//           <label>VIT</label>
-//         </div>
-
-//         <div className="Credential">
-//           <label>User</label>
-//         </div>
-//       </nav>
-//     </div>
-//   );
-// }
-
-// export default Navigation;
-
-
-
-
 import React from 'react';
 import { useState } from 'react';
-import './navBar.css';
+import './Styles/navBar.css';
 
 function NavBar() {
   const [showMenu, setShowMenu] = useState(false);

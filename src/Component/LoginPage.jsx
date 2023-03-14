@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import logo from './img/logo512.png';
+import logo from '../img/logo512.png';
 import MyCaptcha from './Captcha';
+import './Styles/LoginPage.css';
 
-import './LoginPage.css';
+
+
 function LoginPage() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');

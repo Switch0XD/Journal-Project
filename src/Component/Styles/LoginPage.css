@@ -1,12 +1,12 @@
-/* Navigation bar  */
+/* Navigation bar  
 
 .navbar {
   background-color: rgb(36, 85, 163);
   background: linear-gradient(130deg, rgba(36, 85, 163, 1) 23%, rgba(52, 151, 219, 1) 52%, rgba(52, 142, 219, 1) 58%, rgba(52, 131, 219, 1) 65%, rgba(40, 116, 166, 1) 74%);
   padding: 0.5cm;
-}
+} */
 
-/* VIT LOGO image */
+/* VIT LOGO image 
 
 .logo img {
   float: left;
@@ -18,10 +18,11 @@
 
 .logo {
   width: 11%;
-}
+} */
 
+/*
 nav {
-  /* background-color: blue; */
+  background-color: blue;
   height: 30px;
   display: flex;
   align-items: center;
@@ -55,9 +56,9 @@ html {
   height: 100vh;
 } */
 
-/* Journal portal heading  */
+/* Journal portal heading  
 .TitleLogin {
-  /* background-color: blue; */
+  background-color: blue;
   width: 25%;
   height: 10%vh;
   margin-left: 38%;
@@ -71,20 +72,20 @@ html {
 }
 
 .fw-bold h2 {
-  /* display: inline-flexbox;
+  display: inline-flexbox;
   
   font-size: large;
   margin-block-start: 0;
   margin-block-end: 0;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
-  font-weight: bold; */
-  /* text-align: center; */
+  font-weight: bold; 
+   text-align: center; 
   font-family: inherit;
 
 }
 
-/* login form  */
+/* login form  
 
 .LoginForm {
   width: 70vh;
@@ -96,7 +97,7 @@ html {
 
 
 .LoginForm form {
-  /* background-color: #f5f5f5; */
+   background-color: #f5f5f5; 
   padding: 20px;
   border-radius: 10px;
   display: flex;
@@ -108,7 +109,7 @@ html {
 
 }
 
-/* Input tags of login page*/
+/* Input tags of login page
 
 input[type=text] {
   width: 22vh;
@@ -122,7 +123,7 @@ input[type=text] {
 }
 
 input {
-  /* padding: 12px 20px; */
+  /* padding: 12px 20px; 
 }
 
 input[type=text]:focus {
@@ -132,7 +133,7 @@ input[type=text]:focus {
 input[type=password] {
   width: 22vh;
 
-  /* margin: 8px 0; */
+  /* margin: 8px 0; 
   box-sizing: border-box;
   border: 3px solid rgb(171, 194, 232);
   -webkit-transition: 0.5s;
@@ -158,7 +159,7 @@ input[type=password]::placeholder {
 
 label {
   /* margin-bottom: 10px;
-  width: 25%; */
+  width: 25%; 
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   text-align: left;
 }
@@ -190,7 +191,7 @@ input {
 }
 
 
-/* Captcha styling */
+/* Captcha styling 
 
 .Captcha {
   display: block;
@@ -199,7 +200,7 @@ input {
   height: 2px;
   float: left;
   aspect-ratio: 1/2;
-  /* object-fit: contain; */
+  /* object-fit: contain; 
 
 }
 

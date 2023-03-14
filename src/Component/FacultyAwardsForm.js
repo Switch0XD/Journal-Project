@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './FacultyAwardsForm.css'
+import './Styles/FacultyAwardsForm.css';
 
 function FacultyAwardsForm() {
   const [formData, setFormData] = useState({
@@ -8,7 +8,7 @@ function FacultyAwardsForm() {
     awardDate: '',
     organizationType: '',
     organizationName: '',
-    incentivesReceived: '',   
+    incentivesReceived: '',
     proof: ''
   });
   const [previousAwards, setPreviousAwards] = useState([]);
