@@ -1,0 +1,16 @@
+footer {
+  background-color: rgb(36, 85, 163) grad;
+  background: linear-gradient(130deg,
+      rgba(36, 85, 163, 1) 23%,
+      rgba(52, 151, 219, 1) 52%,
+      rgba(52, 142, 219, 1) 58%,
+      rgba(52, 131, 219, 1) 65%,
+      rgba(40, 116, 166, 1) 74%);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+
+}

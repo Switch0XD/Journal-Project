@@ -1,9 +1,5 @@
-/* .App {
+.App {
   text-align: center;
-}
-
-.logo {
-  background-image: url(./logo.svg);
 }
 
 .App-logo {
@@ -40,4 +36,4 @@
   to {
     transform: rotate(360deg);
   }
-} */
+}

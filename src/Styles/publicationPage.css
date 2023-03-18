@@ -1,0 +1,29 @@
+.publication-container div {
+  width: 50%;
+  height: auto;
+  padding-bottom: 2%;
+  background-color: rgb(222, 222, 222);
+  border-radius: 5px;
+}
+
+.publication-field input[type="date"],
+input[type="text"] {
+  width: 50vh;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  margin-left: 20px;
+}
+
+.publication-field label {
+  display: inline-block;
+  width: 140px;
+  text-align: right;
+  font-weight: bold;
+}
+
+.required {
+  color: #ff0000;
+}
