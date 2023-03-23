@@ -29,3 +29,51 @@ body::-webkit-scrollbar-thumb {
 .required {
   color: red;
 }
+
+span {
+  font-family: 'Helvetica Neue';
+  font-size: small;
+  box-shadow: 0 10px 100px rgb(244, 6, 6, 0.3);
+  margin: 5px;
+}
+
+body {
+  background-color: #F6F1F1;
+}
+
+
+button {
+
+  border: 1px solid #eee;
+  border-bottom: 4px solid #eee;
+}
+
+button:before {
+  top: 0;
+  left: 0;
+  width: 150%;
+  background: #259f6c;
+  transform-origin: 0 bottom;
+  transform: translateX(-100%) rotate(-30deg);
+}
+
+button:after {
+  top: 0;
+  left: auto;
+  right: 0;
+  width: 150%;
+  transform-origin: right bottom;
+  transform: translateX(100%) rotate(30deg);
+}
+
+button:hover:before {
+  left: 0;
+  transform: rotate(0deg);
+  transition: all .5s;
+}
+
+button:hover:after {
+  right: 0;
+  transform: rotate(0deg);
+  transition: all .5s;
+}

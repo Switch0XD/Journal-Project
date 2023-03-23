@@ -1,14 +1,67 @@
 .publication-container div {
-  width: 50%;
+  width: 75%;
   height: auto;
   padding-bottom: 2%;
   background-color: rgb(222, 222, 222);
   border-radius: 5px;
+
+}
+
+h2 {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 30px;
+  color: #080808;
+  -webkit-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+
+}
+
+h2:before {
+  width: 28px;
+  height: 5px;
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  margin-left: -14px;
+  background-color: #0072b8;
+}
+
+h2:after {
+  width: 100px;
+  height: 1px;
+  display: block;
+  content: "";
+  position: relative;
+  margin-top: 25px;
+  left: 50%;
+  margin-left: -50px;
+  background-color: #0075b8;
 }
 
 .publication-field input[type="date"],
 input[type="text"] {
-  width: 50vh;
+  width: 10%;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  margin-left: 20px;
+
+}
+
+input[type="file"] {
+  width: 10%;
   padding: 0.5rem;
   border-radius: 0.25rem;
   border: 1px solid #ccc;
@@ -19,11 +72,16 @@ input[type="text"] {
 
 .publication-field label {
   display: inline-block;
-  width: 140px;
-  text-align: right;
+  width: 100%;
+  text-align: left;
   font-weight: bold;
+  justify-items: left;
+  padding-left: 0%;
+  margin: 0%;
 }
 
-.required {
-  color: #ff0000;
+.publication-field {
+  display: revert;
+  justify-content: flex-end;
+  box-shadow: 0 10px 100px rgba(72, 148, 206, 0.2);
 }

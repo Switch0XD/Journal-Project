@@ -14,9 +14,9 @@ function App() {
       <div>
         <NavigationBar />
 
-        {/* <ContributionSheet /> */}
+        <ContributionSheet />
 
-        <Publication />
+        {/* <Publication /> */}
         {/* <Routes>
           <Route exact path='/ContributionSheet' element={< ContributionSheet />}></Route>
         </Routes> */}

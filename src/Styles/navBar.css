@@ -64,6 +64,7 @@
   background: linear-gradient(130deg, rgba(36, 85, 163, 1) 23%, rgba(52, 151, 219, 1) 52%, rgba(52, 142, 219, 1) 58%, rgba(52, 131, 219, 1) 65%, rgba(40, 116, 166, 1) 74%);
   padding: 0.5cm;
   margin-top: 0;
+  margin-bottom: 40px;
 
 }
 
@@ -73,7 +74,7 @@
   width: 100%;
   aspect-ratio: 3/2;
   object-fit: contain;
-  mix-blend-mode: screen;
+  /* mix-blend-mode: screen; */
 }
 
 .logo {
