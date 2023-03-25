@@ -1,6 +1,6 @@
 import React from 'react';
 import NavigationBar from './Component/navBar';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route,Routes} from 'react-router-dom';
 import Publication from './Component/publicationPage';
 import ContributionSheet from './Component/contributionSheet';
 
@@ -14,12 +14,13 @@ function App() {
       <div>
         <NavigationBar />
 
-        <ContributionSheet />
+       
 
-        {/* <Publication /> */}
-        {/* <Routes>
+        <Publication />
+         {/* <ContributionSheet /> */}
+         <Routes>
           <Route exact path='/ContributionSheet' element={< ContributionSheet />}></Route>
-        </Routes> */}
+        </Routes> 
       </div>
     </Router >
   );
