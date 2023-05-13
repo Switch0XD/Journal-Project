@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+  font-family: "Helvetica";
+}
+
+
+
+/* Mobile First */
+form {
+  padding: 0;
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.form-row {
+  padding: 8px 13px 2px 17px;
+  border-bottom: 1px solid #e6eef8;
+}
+
+.form-row:last-child {
+  border: none;
+}
+
+.form-row label {
+  color: #424770;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .43px;
+  line-height: 26px;
+  text-transform: uppercase;
+  display: block;
+}
+
+.form-row input,
+.form-row textarea {
+  display: block;
+  border: none;
+  outline: none;
+  width: 100%;
+  border-radius: 4px;
+  color: #32325d;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 26px;
+  padding: 5px 20px 8px 0;
+}
+
+.submit-row {
+  text-align: right;
+  padding: 12px 10px 13px 0;
+}
+
+.form-submit {
+  -webkit-appearance: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+
+  color: #fff;
+  background: #6772e5;
+
+  height: 40px;
+  white-space: nowrap;
+  display: inline-block;
+  line-height: 40px;
+  padding: 0 14px;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .025em;
+  text-decoration: none;
+  transition: all .15s ease;
+}
+
+.form-submit:active {
+  color: #e6ebf1;
+  background-color: #555abf;
+  transform: translateY(1px);
+  box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+}
+
+
+
+/* Non Mobile */
+@media (min-width: 670px) {
+  form {
+    padding: 10px 18px 20px 24px;
+  }
+
+  .form-row {
+    padding: 4px 0;
+    max-width: 600px;
+    display: flex;
+    flex-direction: row;
+    border-bottom: none;
+  }
+
+  .form-row label {
+    font-size: 17px;
+    font-weight: 500;
+    margin-right: 20px;
+    align-self: center;
+    flex: 30%;
+    letter-spacing: normal;
+    text-transform: none;
+  }
+
+  .form-row:last-child label {
+    align-self: flex-start;
+    padding-top: 7px;
+  }
+
+  .form-row input,
+  .form-row textarea {
+    align-self: center;
+    padding: 5px 20px 8px 13px;
+    flex: 70%;
+    width: auto;
+    border: 1px solid #e6eef8;
+  }
+
+  .form-row textarea {
+    padding: 7px 20px 7px 13px;
+    min-height: 100px;
+  }
+
+  .submit-row {
+    padding: 12px 0 0;
+  }
+}

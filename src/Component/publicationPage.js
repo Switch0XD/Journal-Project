@@ -1,92 +1,115 @@
-import React from 'react';
+/* eslint-disable react-hooks/rules-of-hooks */
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../Styles/publicationPage.css';
 
 
-const validateForm = errors => {
-  let valid = true;
-  Object.values(errors).forEach(val => val.length > 0 && (valid = false));
-  return valid;
-};
-
-export default class Pub extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      fullName: null,
-      email: null,
-      password: null,
-      errors: {
-        fullName: '',
-        Scopus_ID: '',
-        Scopus_Url: '',
-        WOS_ID: '',
-        WOS_Url: '',
-        Google_Scholar: '',
-        ORCHID_ID: '',
-        VIDWAN_ID: '',
-        Research_ID: '',
-      }
-    };
+const initialState = {
+  empId: null,
+  name: null,
+  email: null,
+  password: null,
+  errors: {
+    name: '',
+    scopusId: '',
+    scopusUrl: '',
+    webOfScienceId: '',
+    wosUrl: '',
+    googleScholar: '',
+    orcid_id: '',
+    vidwanId: '',
+    researcherId: '',
   }
+}
 
-  handleChange = (event) => {
+const Publication = () => {
+  const [empId, setempId] = useState('223311');
+  const [name, setname] = useState('testing');
+  const [scopusId, setscopusId] = useState('1234567811');
+  const [scopusUrl, setscopusUrl] = useState('https://mlh.io');
+  const [webOfScienceId, setwebOfScienceId] = useState('C12345678');
+  const [wosUrl, setwosUrl] = useState('https://mlh.io');
+  const [googleScholar, setgoogleScholar] = useState('https://mlh.io');
+  const [orcid_id, setorcid_id] = useState('12345678922');
+  const [vidwanId, setvidwanId] = useState('654321');
+  const [researcherId, setresearcherId] = useState('12345098761');
+
+  const [user, setUser] = useState(initialState);
+
+  const navigates = useNavigate();
+
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const test = { empId, name, scopusId, scopusUrl, webOfScienceId, wosUrl, googleScholar, orcid_id, vidwanId, researcherId }
+
+
+
+    navigates('/contributionSheet', { state: test })
+  };
+
+
+  const handleChange = (event) => {
     event.preventDefault();
     const { name, value } = event.target;
-    let errors = this.state.errors;
+    let errors = user.errors;
 
     switch (name) {
-      case 'fullName':
-        errors.fullName =
+      case 'empId':
+        errors.empId = value.length === 6 ? 'enter' : '';
+        break;
+      case 'name':
+        errors.name =
           value.length < 6
             ? 'Full Name must be at least 6 characters long!'
             : '';
         break;
-      case 'Scopus_ID':
-        errors.Scopus_ID =
+      case 'scopusId':
+        errors.scopusId =
           value.length < 3
             ? 'Scopus ID must be at least 4 characters long!'
             : '';
         break;
-      case 'Scopus_Url':
-        errors.Scopus_Url =
+      case 'scopusUrl':
+        errors.scopusUrl =
           (!/^(?:(?:(?:https?|ftp):)?\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:[/?#]\S*)?$/i.test(value))
             ? 'Please enter a valid URL!'
             : '';
         break;
-      case 'WOS_ID':
-        errors.WOS_ID =
+      case 'webOfScienceId':
+        errors.webOfScienceId =
           value.length < 3
-            ? 'Scopus WOS_ID must be at least 4 characters long!'
+            ? 'ScopuswebOfScienceId must be at least 4 characters long!'
             : '';
         break;
-      case 'WOS_Url':
-        errors.WOS_Url =
+      case 'wosUrl':
+        errors.wosUrl =
           (!/^(?:(?:(?:https?|ftp):)?\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:[/?#]\S*)?$/i.test(value))
             ? 'Please enter a valid URL!'
             : '';
         break;
-      case 'Google_Scholar':
-        errors.Google_Scholar = (!/^(?:(?:(?:https?|ftp):)?\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:[/?#]\S*)?$/i.test(value))
+      case 'googleScholar':
+        errors.googleScholar = (!/^(?:(?:(?:https?|ftp):)?\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:[/?#]\S*)?$/i.test(value))
           ? 'Please enter a valid Url'
           : '';
         break;
 
-      case 'ORCID_ID':
-        errors.ORCHID_ID =
+      case 'orcid_id':
+        errors.orcid_id =
           value.length < 3
-            ? 'ORCID_ID must be at least 4 characters long!'
+            ? 'orcid_id must be at least 4 characters long!'
             : '';
         break;
-      case 'VIDWAN_ID':
-        errors.VIDWAN_ID =
+      case 'vidwanId':
+        errors.vidwanId =
           value.length < 3
-            ? 'VIDWAN_ID must be at least 4characters long!'
+            ? 'vidwanId must be at least 4characters long!'
             : '';
         break;
-      case 'Research_ID':
-        errors.Research_ID =
+      case 'researcherId':
+        errors.researcherId =
           value.length < 3
-            ? 'Research_ID must be at least 4characters long!'
+            ? 'researcherId must be at least 4characters long!'
             : '';
         break;
 
@@ -95,90 +118,103 @@ export default class Pub extends React.Component {
         break;
     }
 
-    this.setState({ errors, [name]: value });
+    setUser({ errors, [name]: value });
   }
+  const { errors } = user;
+  return (
+    <div className='publication-container'>
 
-  handleSubmit = (event) => {
-    event.preventDefault();
-    if (validateForm(this.state.errors)) {
-      console.info('Valid Form')
-    } else {
-      console.error('Invalid Form')
-    }
-  }
+      <h2 className='PublicationForm'>Publication-Form</h2>
+      <form onSubmit={handleSubmit}>
+        <div className='publication-field' >
+          <label htmlFor="Employee ID">1. Employee ID <span class="required">*</span>
+            <input type="text" id="Employee ID" value={empId} name="Employee ID" onInput={(e) => setempId(e.target.value)} required /></label>
+          <label>
 
-  render() {
-    const { errors } = this.state;
-    return (
-      <center><div className='publication-container'>
-        <div className='publication-field'>
-          <h2>Publication-Form</h2>
-          <form method="POST"
-            action="https://script.google.com/macros/s/AKfycbx1j47m7n7oUoDYHtF6lpyIq0zXzbG35BUXen5SND4vDBGo_p6vhafXiBvlj-aCGeA/exec">
-            <div className='publication-field'>
-
-              <label htmlFor="fullName">Name of the Faculty</label>
-              <input type='text' name='fullName' onChange={this.handleChange} noValidate placeholder='Enter Full Name' required />
-              {errors.fullName.length > 0 &&
-                <span className='error'>{errors.fullName}</span>}
-            </div>
-            <div className='publication-field'>
-              <label htmlFor="password">ScopusID</label>
-              <input type='text' name='Scopus ID' onChange={this.handleChange} noValidate required placeholder='7103138412' />
-              {errors.Scopus_ID.length > 0 &&
-                <span className='error'>{errors.Scopus_ID}</span>}
-            </div>
-            <div className='publication-field'>
-              <label htmlFor="password">Scopus Url</label>
-              <input type='text' name='Scopus_Url' onChange={this.handleChange} noValidate required placeholder='Profile Url' />
-              {errors.Scopus_Url.length > 0 &&
-                <span className='error'>{errors.Scopus_Url}</span>}
-            </div>
-            <div className='publication-field'>
-              <label htmlFor="password">Web of Science ID (WoS ID)</label>
-              <input type='text' name='WOS_ID' onChange={this.handleChange} noValidate required placeholder='P-1234-20XX' />
-              {errors.WOS_ID.length > 0 &&
-                <span className='error'>{errors.WOS_ID}</span>}
-            </div>
-
-            <div className='publication-field'>
-              <label htmlFor="password">WOS Url</label>
-              <input type='text' name='WOS_Url' onChange={this.handleChange} noValidate required placeholder='Profile Url' />
-              {errors.WOS_Url.length > 0 &&
-                <span className='error'>{errors.WOS_Url}</span>}
-            </div>
-            <div className='publication-field'>
-              <label htmlFor="password">Google-Scholar Url</label>
-              <input type='text' name='Google_Scholar' onChange={this.handleChange} noValidate required placeholder='Profile Url' />
-              {errors.Google_Scholar.length > 0 &&
-                <span className='error'>{errors.Google_Scholar}</span>}
-            </div>
-            <div className='publication-field'>
-              <label htmlFor="password">ORCID-ID</label>
-              <input type='text' name='ORCID_ID' onChange={this.handleChange} noValidate required placeholder='0000-0000-0000-0000' />
-              {errors.ORCHID_ID.length > 0 &&
-                <span className='error'>{errors.ORCHID_ID}</span>}
-            </div>
-            <div className='publication-field'>
-              <label htmlFor="password">VIDWAN-ID</label>
-              <input type='text' name='VIDWAN_ID' onChange={this.handleChange} noValidate required placeholder='123456' />
-              {errors.VIDWAN_ID.length > 0 &&
-                <span className='error'>{errors.VIDWAN_ID}</span>}
-            </div>
-            <div className='publication-field'>
-              <label htmlFor="password">Researcher ID</label>
-              <input type='text' name='Research_ID' onChange={this.handleChange} noValidate required placeholder='ABC-1234-20XX' />
-              {errors.Research_ID.length > 0 &&
-                <span className='error'>{errors.Research_ID}</span>}
-            </div>
-
-            <div className='submit'>
-              <button type='submit' >Submit</button>
-            </div>
-          </form>
+            Name of the Faculty :
+            <input type="text" value={name} name='name' onInput={e => setname(e.target.value)} onChange={handleChange} noValidate placeholder='Enter Full Name' required />
+            {errors.name.length > 0 &&
+              <span className='error'>{errors.name}</span>}
+          </label>
         </div>
-      </div>
-      </center>
-    );
-  }
+        <div className='publication-field'>
+          <label>
+            Scopus ID :
+            <input type="text" value={scopusId} name='scopusId' onInput={e => setscopusId(e.target.value)} onChange={handleChange} noValidate required placeholder='7103138412' />
+            {errors.scopusId.length > 0 &&
+              <span className='error'>{errors.scopusId}</span>}
+          </label>
+        </div>
+        <div className='publication-field'>
+          <label>
+            Scopus Url:
+            <input type="text" value={scopusUrl} name='scopusUrl' onInput={e => setscopusUrl(e.target.value)} onChange={handleChange} noValidate required placeholder='Profile Url' />
+            {errors.scopusUrl.length > 0 &&
+              <span className='error'>{errors.scopusUrl}</span>}
+          </label>
+        </div>
+        <div className='publication-field'>
+          <label>
+            Web of Science(WOS) ID :
+            <input type="text" value={webOfScienceId} name='webOfScienceId' onInput={e => setwebOfScienceId(e.target.value)} onChange={handleChange} noValidate required placeholder='P-1234-20XX' />
+            {errors.webOfScienceId.length > 0 &&
+              <span className='error'>{errors.webOfScienceId}</span>}
+          </label>
+        </div>
+
+        <div className='publication-field'>
+          <label>
+            WOS Url :
+            <input type="text" value={wosUrl} name='wosUrl' onInput={e => setwosUrl(e.target.value)} onChange={handleChange} noValidate required placeholder='Profile Url' />
+            {errors.wosUrl.length > 0 &&
+              <span className='error'>{errors.wosUrl}</span>}
+          </label>
+        </div>
+        <div className='publication-field'>
+          <label>
+            Google Scholar :
+            <input type="text" value={googleScholar} name='googleScholar' onInput={e => setgoogleScholar(e.target.value)} onChange={handleChange} noValidate required placeholder='Profile Url' />
+            {errors.googleScholar.length > 0 &&
+              <span className='error'>{errors.googleScholar}</span>}
+          </label>
+        </div>
+        <div className='publication-field'>
+          <label>
+            ORCID ID :
+            <input type="text" value={orcid_id} name='orcid_id' onInput={e => setorcid_id(e.target.value)} onChange={handleChange} noValidate required placeholder='0000-0000-0000-0000' />
+            {errors.orcid_id.length > 0 &&
+              <span className='error'>{errors.orcid_id}</span>}
+          </label>
+        </div>
+        <div className='publication-field'>
+          <label>
+            VIDWAN ID :
+            <input type="text" value={vidwanId} name='vidwanId' onInput={e => setvidwanId(e.target.value)} onChange={handleChange} noValidate required placeholder='123456' />
+            {errors.vidwanId.length > 0 &&
+              <span className='error'>{errors.vidwanId}</span>}
+          </label>
+        </div>
+        <div className='publication-field'>
+          <label>
+            Researcher ID :
+            <input type="text" name='researcherId' value={researcherId} onInput={e => setresearcherId(e.target.value)} onChange={handleChange} noValidate required placeholder='ABC-1234-20XX' />
+            {errors.researcherId.length > 0 &&
+              <span className='error'>{errors.researcherId}</span>}
+          </label>
+        </div>
+
+        <div className='submit'>
+          <button type='submit' >Submit</button>
+        </div>
+      </form>
+    </div>
+
+  );
 }
+
+
+
+
+
+
+export default Publication;

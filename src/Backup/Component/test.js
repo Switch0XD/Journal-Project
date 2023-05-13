@@ -37,11 +37,3 @@ function MyForm() {
 }
 
 export default MyForm;
-
- // fetch('https://script.google.com/macros/s/AKfycbx1j47m7n7oUoDYHtF6lpyIq0zXzbG35BUXen5SND4vDBGo_p6vhafXiBvlj-aCGeA/exec', {
-    //   method: 'POST',
-    //   body: formData
-    // })
-    //   .then(response => response.json())
-    //   .then(data => console.log(data))
-    //   .catch(error => console.error(error));

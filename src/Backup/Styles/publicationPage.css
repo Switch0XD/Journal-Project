@@ -1,7 +1,6 @@
 .publication-container div {
-  width: 50%;
-  margin-inline: auto;
-  height: 50%;
+  width: 75%;
+  height: auto;
   padding-bottom: 2%;
   background-color: rgb(222, 222, 222);
   border-radius: 5px;
@@ -47,28 +46,34 @@ h2:after {
   left: 50%;
   margin-left: -50px;
   background-color: #0075b8;
-
 }
 
-.publication-field input[type="text"] {
-  width: 35%;
+.publication-field input[type="date"],
+input[type="text"] {
+  width: 10%;
   padding: 0.5rem;
   border-radius: 0.25rem;
   border: 1px solid #ccc;
   font-size: 1rem;
   margin-top: 0.5rem;
-  margin-right: auto;
+  margin-left: 20px;
 
 }
 
-label {
-  margin-left: 100px;
+input[type="file"] {
+  width: 10%;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  margin-left: 20px;
 }
 
-.publication-field {
+.publication-field label {
   display: inline-block;
   width: 100%;
-
+  text-align: left;
   font-weight: bold;
   justify-items: left;
   padding-left: 0%;

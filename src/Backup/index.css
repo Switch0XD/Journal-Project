@@ -31,7 +31,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 span {
-  color: red;
   font-family: 'Helvetica Neue';
   font-size: small;
   box-shadow: 0 10px 100px rgb(244, 6, 6, 0.3);

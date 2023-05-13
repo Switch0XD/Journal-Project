@@ -1,0 +1,57 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Publication {
+  id             String @id @default(uuid())
+  empId          Int    @unique
+  name           String @db.VarChar(255)
+  scopusId       String @unique @db.VarChar(10)
+  scopusUrl      String @db.VarChar(255)
+  webOfScienceId String @db.VarChar(9)
+  wosUrl         String @db.VarChar(255)
+  googleScholar  String @db.VarChar(255)
+  orcid_id       String @unique @db.VarChar(12)
+  vidwanId       Int    @unique @db.MediumInt()
+  researcherId   String @unique @db.VarChar(11)
+}
+
+model contributionSheet {
+  id            String   @id @default(uuid())
+  empId         Int      @unique
+  name          String   @db.VarChar(255)
+  dateOfJoining DateTime
+  type          String   @db.VarChar(255)
+  year          Int      @db.SmallInt()
+  title         String
+  description   String
+  impactFactor  String
+  indexing      String
+  funded        String
+  role          String
+  patent        String
+  url           String
+  file          String
+}
+
+// "empId":123
+// "name":"test",
+// "dateOfJoining":"08/12/2023",
+// "type":"test"
+// "year":"2023"
+// "title":"test"
+// "description":"desc"
+// "impactFactor":"test"
+// "indexing":"test"
+// "funded":"test"
+// "role":"test"
+// "patent":"test"
+// "url":"test"
+// "file":"test"
