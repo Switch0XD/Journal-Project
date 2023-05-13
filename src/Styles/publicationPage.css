@@ -1,11 +1,13 @@
-.publication-container div {
+.publication-container .publication-field {
   width: 50%;
   margin-inline: auto;
-  height: 50%;
   padding-bottom: 2%;
   background-color: rgb(222, 222, 222);
   border-radius: 5px;
+}
 
+.publication-container {
+  margin-bottom: 2rem;
 }
 
 h2 {
@@ -51,32 +53,45 @@ h2:after {
 }
 
 .publication-field input[type="text"] {
-  width: 35%;
   padding: 0.5rem;
   border-radius: 0.25rem;
   border: 1px solid #ccc;
   font-size: 1rem;
   margin-top: 0.5rem;
   margin-right: auto;
-
-}
-
-label {
-  margin-left: 100px;
 }
 
 .publication-field {
-  display: inline-block;
-  width: 100%;
-
+  display: flex !important;
+  gap: 10;
+  padding-inline: 5rem;
+  justify-content: space-between;
   font-weight: bold;
-  justify-items: left;
-  padding-left: 0%;
-  margin: 0%;
+  margin-inline: 5rem;
+
 }
 
+.publication-field label {
+  flex: 1
+}
+
+.publication-field input {
+  flex: 2.2
+}
+
+.publication-field input:focus {
+  outline-color: blue;
+}
+
+
 .publication-field {
-  display: revert;
-  justify-content: flex-end;
   box-shadow: 0 10px 100px rgba(72, 148, 206, 0.2);
+}
+
+#formm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: red; */
 }

@@ -42,7 +42,7 @@ body {
   background-color: #F6F1F1;
 }
 
-
+/* 
 button {
 
   border: 1px solid #eee;
@@ -77,4 +77,4 @@ button:hover:after {
   right: 0;
   transform: rotate(0deg);
   transition: all .5s;
-}
+} */

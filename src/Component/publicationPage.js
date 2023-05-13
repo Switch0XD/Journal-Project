@@ -124,86 +124,90 @@ const Publication = () => {
   return (
     <div className='publication-container'>
 
-      <h2 className='PublicationForm'>Publication-Form</h2>
-      <form onSubmit={handleSubmit}>
+      <h2 id='PublicationForm'>Publication-Form</h2>
+      <form id='formm' onSubmit={handleSubmit}>
         <div className='publication-field' >
-          <label htmlFor="Employee ID">1. Employee ID <span class="required">*</span>
-            <input type="text" id="Employee ID" value={empId} name="Employee ID" onInput={(e) => setempId(e.target.value)} required /></label>
-          <label>
+          <label htmlFor="Employee ID">1. Employee ID <span class="required">*</span></label>
+          <input type="text" id="Employee ID" value={empId} name="Employee ID" onInput={(e) => setempId(e.target.value)} required />
+        </div>
 
-            Name of the Faculty :
-            <input type="text" value={name} name='name' onInput={e => setname(e.target.value)} onChange={handleChange} noValidate placeholder='Enter Full Name' required />
-            {errors.name.length > 0 &&
-              <span className='error'>{errors.name}</span>}
-          </label>
-        </div>
-        <div className='publication-field'>
-          <label>
-            Scopus ID :
-            <input type="text" value={scopusId} name='scopusId' onInput={e => setscopusId(e.target.value)} onChange={handleChange} noValidate required placeholder='7103138412' />
-            {errors.scopusId.length > 0 &&
-              <span className='error'>{errors.scopusId}</span>}
-          </label>
-        </div>
-        <div className='publication-field'>
-          <label>
-            Scopus Url:
-            <input type="text" value={scopusUrl} name='scopusUrl' onInput={e => setscopusUrl(e.target.value)} onChange={handleChange} noValidate required placeholder='Profile Url' />
-            {errors.scopusUrl.length > 0 &&
-              <span className='error'>{errors.scopusUrl}</span>}
-          </label>
-        </div>
-        <div className='publication-field'>
-          <label>
-            Web of Science(WOS) ID :
-            <input type="text" value={webOfScienceId} name='webOfScienceId' onInput={e => setwebOfScienceId(e.target.value)} onChange={handleChange} noValidate required placeholder='P-1234-20XX' />
-            {errors.webOfScienceId.length > 0 &&
-              <span className='error'>{errors.webOfScienceId}</span>}
-          </label>
-        </div>
+
+
+        <div className='publication-field' >
+          <label>Name of the Faculty :  </label>
+          <input type="text" value={name} name='name' onInput={e => setname(e.target.value)} onChange={handleChange} noValidate placeholder='Enter Full Name' required />
+          {errors.name.length > 0 &&
+            <span className='error'>{errors.name}</span>} </div>
+
+
 
         <div className='publication-field'>
           <label>
-            WOS Url :
-            <input type="text" value={wosUrl} name='wosUrl' onInput={e => setwosUrl(e.target.value)} onChange={handleChange} noValidate required placeholder='Profile Url' />
-            {errors.wosUrl.length > 0 &&
-              <span className='error'>{errors.wosUrl}</span>}
-          </label>
+            Scopus ID :  </label>
+          <input type="text" value={scopusId} name='scopusId' onInput={e => setscopusId(e.target.value)} onChange={handleChange} noValidate required placeholder='7103138412' />
+          {errors.scopusId.length > 0 &&
+            <span className='error'>{errors.scopusId}</span>}
+
         </div>
         <div className='publication-field'>
           <label>
-            Google Scholar :
-            <input type="text" value={googleScholar} name='googleScholar' onInput={e => setgoogleScholar(e.target.value)} onChange={handleChange} noValidate required placeholder='Profile Url' />
-            {errors.googleScholar.length > 0 &&
-              <span className='error'>{errors.googleScholar}</span>}
-          </label>
+            Scopus Url:  </label>
+          <input type="text" value={scopusUrl} name='scopusUrl' onInput={e => setscopusUrl(e.target.value)} onChange={handleChange} noValidate required placeholder='Profile Url' />
+          {errors.scopusUrl.length > 0 &&
+            <span className='error'>{errors.scopusUrl}</span>}
+
         </div>
         <div className='publication-field'>
           <label>
-            ORCID ID :
-            <input type="text" value={orcid_id} name='orcid_id' onInput={e => setorcid_id(e.target.value)} onChange={handleChange} noValidate required placeholder='0000-0000-0000-0000' />
-            {errors.orcid_id.length > 0 &&
-              <span className='error'>{errors.orcid_id}</span>}
-          </label>
-        </div>
-        <div className='publication-field'>
-          <label>
-            VIDWAN ID :
-            <input type="text" value={vidwanId} name='vidwanId' onInput={e => setvidwanId(e.target.value)} onChange={handleChange} noValidate required placeholder='123456' />
-            {errors.vidwanId.length > 0 &&
-              <span className='error'>{errors.vidwanId}</span>}
-          </label>
-        </div>
-        <div className='publication-field'>
-          <label>
-            Researcher ID :
-            <input type="text" name='researcherId' value={researcherId} onInput={e => setresearcherId(e.target.value)} onChange={handleChange} noValidate required placeholder='ABC-1234-20XX' />
-            {errors.researcherId.length > 0 &&
-              <span className='error'>{errors.researcherId}</span>}
-          </label>
+            Web of Science(WOS) ID :       </label>
+          <input type="text" value={webOfScienceId} name='webOfScienceId' onInput={e => setwebOfScienceId(e.target.value)} onChange={handleChange} noValidate required placeholder='P-1234-20XX' />
+          {errors.webOfScienceId.length > 0 &&
+            <span className='error'>{errors.webOfScienceId}</span>}
+
         </div>
 
-        <div className='submit'>
+        <div className='publication-field'>
+          <label>
+            WOS Url :   </label>
+          <input type="text" value={wosUrl} name='wosUrl' onInput={e => setwosUrl(e.target.value)} onChange={handleChange} noValidate required placeholder='Profile Url' />
+          {errors.wosUrl.length > 0 &&
+            <span className='error'>{errors.wosUrl}</span>}
+
+        </div>
+        <div className='publication-field'>
+          <label>
+            Google Scholar :      </label>
+          <input type="text" value={googleScholar} name='googleScholar' onInput={e => setgoogleScholar(e.target.value)} onChange={handleChange} noValidate required placeholder='Profile Url' />
+          {errors.googleScholar.length > 0 &&
+            <span className='error'>{errors.googleScholar}</span>}
+
+        </div>
+        <div className='publication-field'>
+          <label>
+            ORCID ID :         </label>
+          <input type="text" value={orcid_id} name='orcid_id' onInput={e => setorcid_id(e.target.value)} onChange={handleChange} noValidate required placeholder='0000-0000-0000-0000' />
+          {errors.orcid_id.length > 0 &&
+            <span className='error'>{errors.orcid_id}</span>}
+
+        </div>
+        <div className='publication-field'>
+          <label>
+            VIDWAN ID : </label>
+          <input type="text" value={vidwanId} name='vidwanId' onInput={e => setvidwanId(e.target.value)} onChange={handleChange} noValidate required placeholder='123456' />
+          {errors.vidwanId.length > 0 &&
+            <span className='error'>{errors.vidwanId}</span>}
+
+        </div>
+        <div className='publication-field'>
+          <label>
+            Researcher ID :</label>
+          <input type="text" name='researcherId' value={researcherId} onInput={e => setresearcherId(e.target.value)} onChange={handleChange} noValidate required placeholder='ABC-1234-20XX' />
+          {errors.researcherId.length > 0 &&
+            <span className='error'>{errors.researcherId}</span>}
+
+        </div>
+
+        <div id='submit'>
           <button type='submit' >Submit</button>
         </div>
       </form>

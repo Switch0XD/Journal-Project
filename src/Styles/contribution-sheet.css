@@ -10,7 +10,7 @@
 
 }
 
-.form-container {
+/* .form-container {
   margin: 2rem auto;
   width: 80%;
   background-color: #cee6ee28;
@@ -20,7 +20,7 @@
 
 .form-group {
   display: flex;
-}
+} */
 
 radio {
   margin: 100px;
@@ -111,14 +111,23 @@ input[type="text"] {
 
 
 button[type="submit"] {
-  background-color: #007bff;
+  transition-duration: 0.4s;
+  background: #65a3e4;
   color: #fff;
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   font-size: 1rem;
   cursor: pointer;
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
+}
+
+button[type="submit"]:hover {
+
+  background: rgba(40, 116, 166, 1) 74%;
+  ;
+
+
 }
 
 table {
