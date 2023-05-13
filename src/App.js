@@ -20,7 +20,7 @@ function App() {
         {/* <Publication /> */}
         {/* <TTTest /> */}
         <Routes>
-          <Route exact path='/Publication' element={< Publication />}></Route>
+          <Route exact path='/' element={< Publication />}></Route>
         </Routes>
 
         <Routes>
