@@ -120,12 +120,12 @@ const Faculty = () => {
   }
   return (
     <div className="form-container" >
-      <center> <h2>Faculty Contribution-Sheet</h2>  </center>
-      <p class="instruction-fcs" align="left"><strong> Dear Professor</strong>,
+      <center> <h2 className='heading-sheet'>Faculty Contribution Sheet</h2>  </center>
+      <p class="instruction-fcs" align="left"><strong> Dear Professor</strong>,<br /> <br />
         Please fill your Contribution details carefully.
-        Don't submit incomplete information.
-        If no Contributions/not applicable, mention NA.
-        You can submit the forms multiple times for every Contribution.*
+        <br />
+        If no Contributions/not applicable, mention NA. <br />
+        You can submit the forms multiple times for every Contribution.* <br />
         Please submit the details of the contribution that bear the VIT Bhopal Affiliation.</p>
 
       <form onSubmit={handleSubmit} >
@@ -227,8 +227,8 @@ const Faculty = () => {
         <input type="text" id="Total Funded Amount " value={FundAmount} name="Total Funded Amount " onInput={(e) => setFundAmount(e.target.value)} required />
 
 
-        <label htmlFor="Role for Funded Projects">11. Role for Funded Projects/ Funded Seminars / Consultancy/Patents/Papers
-          /Books. For others, please choose NA<span class="required">*</span></label>
+        <label htmlFor="Role for Funded Projects">11. Role for Funded Projects/Funded Seminars/Consultancy/Patents/Papers
+          /Books. For others,NA<span class="required">*</span></label>
 
 
         <div className="radio">
@@ -267,7 +267,7 @@ const Faculty = () => {
 
             <input type="radio" value="Granted" name="PresentStatusofPatentsOnly" /></label>
           <label>
-
+            NA
             <input type="radio" value="NA" name="PresentStatusofPatentsOnly" /></label>
         </div>
 
