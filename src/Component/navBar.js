@@ -12,15 +12,9 @@ function NavBar() {
 
   return (
     <nav className="navbar">
-      <div className="logo">
-        <img src={logo} alt="" />
-      </div>
-      <button className="menu-icon" onClick={handleMenuClick}>
-        {showMenu ? 'Close' : 'Menu'}
-      </button>
-      <ul className={`menu ${showMenu ? 'show' : ''}`}>
 
-      </ul>
+      <img className='logo' src={logo} alt="" />
+
     </nav>
   );
 }

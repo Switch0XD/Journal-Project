@@ -10,6 +10,7 @@ const initialState = {
   email: null,
   password: null,
   errors: {
+    empId: '',
     name: '',
     scopusId: '',
     scopusUrl: '',
@@ -56,18 +57,18 @@ const Publication = () => {
 
     switch (name) {
       case 'empId':
-        errors.empId = value.length === 6 ? 'enter' : '';
+        errors.empId = value.length === 4 ? 'Please enter Employee ID ' : '';
         break;
       case 'name':
         errors.name =
           value.length < 6
-            ? 'Full Name must be at least 6 characters long!'
+            ? 'Please Enter valid name'
             : '';
         break;
       case 'scopusId':
         errors.scopusId =
-          value.length < 3
-            ? 'Scopus ID must be at least 4 characters long!'
+          value.length === 10
+            ? 'Please Enter valid Scopus ID'
             : '';
         break;
       case 'scopusUrl':
@@ -78,8 +79,8 @@ const Publication = () => {
         break;
       case 'webOfScienceId':
         errors.webOfScienceId =
-          value.length < 3
-            ? 'ScopuswebOfScienceId must be at least 4 characters long!'
+          value.length === 9
+            ? 'Please enter Web of Science ID'
             : '';
         break;
       case 'wosUrl':
@@ -96,20 +97,20 @@ const Publication = () => {
 
       case 'orcid_id':
         errors.orcid_id =
-          value.length < 3
-            ? 'orcid_id must be at least 4 characters long!'
+          value.length === 12
+            ? 'Please Enter valid ORCID ID'
             : '';
         break;
       case 'vidwanId':
         errors.vidwanId =
-          value.length < 3
-            ? 'vidwanId must be at least 4characters long!'
+          value.length === 6
+            ? 'Please Enter valid Vidwan ID'
             : '';
         break;
       case 'researcherId':
         errors.researcherId =
-          value.length < 3
-            ? 'researcherId must be at least 4characters long!'
+          value.length === 11
+            ? 'Please Enter valid Researcher ID'
             : '';
         break;
 
@@ -124,17 +125,18 @@ const Publication = () => {
   return (
     <div className='publication-container'>
 
-      <h2 id='PublicationForm'>Publication-Form</h2>
+      <h2 id='Heading'>Publication Form</h2>
+
       <form id='formm' onSubmit={handleSubmit}>
         <div className='publication-field' >
-          <label htmlFor="Employee ID">1. Employee ID <span class="required">*</span></label>
+          <label htmlFor="Employee ID">Employee ID <span class="required">*</span></label>
           <input type="text" id="Employee ID" value={empId} name="Employee ID" onInput={(e) => setempId(e.target.value)} required />
         </div>
 
 
 
         <div className='publication-field' >
-          <label>Name of the Faculty :  </label>
+          <label>Name of the Faculty<span class="required">*</span></label>
           <input type="text" value={name} name='name' onInput={e => setname(e.target.value)} onChange={handleChange} noValidate placeholder='Enter Full Name' required />
           {errors.name.length > 0 &&
             <span className='error'>{errors.name}</span>} </div>

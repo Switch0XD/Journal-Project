@@ -1,13 +1,28 @@
 .publication-container .publication-field {
-  width: 50%;
+  width: 70%;
   margin-inline: auto;
   padding-bottom: 2%;
-  background-color: rgb(222, 222, 222);
-  border-radius: 5px;
+  background: transparent;
+  border: 0.5px solid #c6e7f1;
+
+  margin-top: 2px;
+
+  border-radius: 12px;
+
 }
 
 .publication-container {
   margin-bottom: 2rem;
+  width: 50%;
+  margin: auto;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+/*  */
+#Heading {
+  margin: 40px;
+  ;
 }
 
 h2 {
@@ -15,7 +30,7 @@ h2 {
   padding: 0;
   margin: 0;
   font-family: "Raleway", sans-serif;
-  font-weight: 300;
+
   font-size: 30px;
   color: #080808;
   -webkit-transition: all 0.4s ease 0s;
@@ -62,12 +77,16 @@ h2:after {
 }
 
 .publication-field {
+
   display: flex !important;
   gap: 10;
   padding-inline: 5rem;
   justify-content: space-between;
+  align-items: baseline;
   font-weight: bold;
   margin-inline: 5rem;
+  padding-top: 10px;
+
 
 }
 
@@ -80,7 +99,7 @@ h2:after {
 }
 
 .publication-field input:focus {
-  outline-color: blue;
+  outline-color: #0072b8;
 }
 
 
@@ -93,5 +112,4 @@ h2:after {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background-color: red; */
 }
