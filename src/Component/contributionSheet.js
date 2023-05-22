@@ -27,6 +27,7 @@ const Faculty = () => {
   console.log(Navigator)
 
 
+
   useEffect(() => {
     if (!dataOne.state) {
       Navigator('/Publication');
@@ -35,6 +36,7 @@ const Faculty = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
     const { empId, fullName, scopusId, scopusUrl, webOfScienceId, wosUrl, googleScholar, orcid_id, vidwanId, researcherId } = dataOne.state
     const formData = new FormData();
     formData.append('fullName', fullName);
@@ -62,7 +64,7 @@ const Faculty = () => {
     formData.append('GrantLetterFile', GrantLetterFile);
 
 
-
+    alert('Thank You,\nYour Data has been recorded,\nPlease close the tab.');
     const test = {
       empId: empId,
       name: name,
@@ -130,19 +132,19 @@ const Faculty = () => {
 
       <form onSubmit={handleSubmit} >
 
-        <label id='#contribution-label'>1. Employee ID <span class="required">*</span></label>
+        <label id='contribution-label'> <strong>1 .</strong>  Employee ID <span class="required">*</span></label>
         <input type="text" id="Employee ID" sheet-input value={empId} name="Employee ID" onInput={(e) => setempId(e.target.value)} required />
 
 
 
 
-        <label htmlFor="Employee Name">2. Employee Name <span class="required">*</span></label>
+        <label id='contribution-label' htmlFor="Employee Name"> <strong>2 .</strong>  Employee Name <span class="required">*</span></label>
         <input type="text" id="Employee Name" value={name} name="Employee Name" onInput={(e) => setname(e.target.value)} required />
 
 
 
 
-        <label htmlFor="Date Of Joining">3. Date Of Joining <span class="required">*</span></label>
+        <label id='contribution-label' htmlFor="Date Of Joining"> <strong>3 .</strong>  Date Of Joining <span class="required">*</span></label>
         <input type="date" id="Date Of Joining" value={DOJ} name="Date Of Joining" onInput={(e) => setDOJ(e.target.value)} required />
 
 
@@ -150,7 +152,7 @@ const Faculty = () => {
 
 
 
-        <label htmlFor="Type of Contribution">4. Type of Contribution<span class="required">*</span> </label>
+        <label id='contribution-label' htmlFor="Type of Contribution"> <strong>4 .</strong> Type of Contribution<span class="required">*</span> </label>
 
         <select onChange={(e) => setContriList(e.target.value)} value={ContriList} name="Type of Contribution">
           <option value="">Select of Type of Contribution</option>
@@ -169,19 +171,19 @@ const Faculty = () => {
 
 
 
-        <label htmlFor="Year Of Contribution">5. Year Of Contribution<span class="required">*</span></label>
+        <label id='contribution-label' htmlFor="Year Of Contribution"> <strong>5 .</strong> Year Of Contribution<span class="required">*</span></label>
         <input type="number" value={YearOfContribution} placeholder="YYYY" min="2017" max="2100" onInput={(e) => setYearOfContribution(e.target.value)} required />
 
 
 
 
-        <label htmlFor="Title of the Contribution">6. Title of the Contribution <span class="required">*</span></label>
+        <label id='contribution-label' htmlFor="Title of the Contribution"> <strong>6 .</strong> Title of the Contribution <span class="required">*</span></label>
         <input type="text" className='sheet-input' id="Title of the Contribution" value={TitleOfContribution} name="Title of the Contribution" onInput={(e) => setTitleOfContribution(e.target.value)} required />
 
 
 
 
-        <label htmlFor="Description">7. Description of the Contribution (Name of the Journal/Conference, Vol No, Issue
+        <label id='contribution-label' htmlFor="Description"> <strong>7 .</strong> Description of the Contribution (Name of the Journal/Conference, Vol No, Issue
           No for Conference & Journal Papers, ISBN and Publisher Name for Book and
           Book Chapters, Patent No for Patents, Name of the funding Agency for Funded
           Projects/ Funded Seminars / Consultancy, Name of Awarder for Awards &
@@ -192,46 +194,46 @@ const Faculty = () => {
 
 
 
-        <label htmlFor=" Impact Factor for Publications">8. Impact Factor for Publications, If Applicable. Please use NA, if Not Applicable. <span class="required">*</span></label>
+        <label id='contribution-label' htmlFor=" Impact Factor for Publications"> <strong>8 .</strong>  Impact Factor for Publications, If Applicable. Please use NA, if Not Applicable. <span class="required">*</span></label>
         <input type="text" id=" Impact Factor for Publications" value={ImpactFactorforPublication} name=" Impact Factor for Publications" onInput={(e) => setImpactFactorforPublication(e.target.value)} required />
 
 
 
-        <label htmlFor="Indexing of the Publications">9.Indexing of the Publications (This is for Journal Publication, Conference
+        <label id='contribution-label' htmlFor="Indexing of the Publications"> <strong>9 .</strong> Indexing of the Publications (This is for Journal Publication, Conference
           Publication, Book and Book Chapter. Please use topmost indexing, if the
           publication indexed by more than one indexing) <span class="required">*</span></label>
 
 
 
         <div className="radio-contributionsheet" onChange={(e) => setIndexOfPublication(e.target.value)} >
-          <label>SCI/SCIE/ESCI (MJR CLARIVATE ANALYTICS)
-            <input type="radio" value="SCI/SCIE/ESCI (MJR CLARIVATE ANALYTICS)" name="IndexOfPublication" /></label>
-          <label>Scopus
+          <label id='radio9label' >SCI/SCIE/ESCI (MJR CLARIVATE ANALYTICS)</label>
+          <input type="radio" value="SCI/SCIE/ESCI (MJR CLARIVATE ANALYTICS)" name="IndexOfPublication" />
+          <label id='radio9label' >Scopus</label>
 
-            <input type="radio" value="SCOPUS" name="IndexOfPublication" />
-          </label>
-          <label>Web of Science
-            <input type="radio" value="WOS" name="IndexOfPublication" /></label>
-          <label>UGC Care
-            <input type="radio" value="UGC_Care" name="IndexOfPublication" /></label>
-          <label>Non Indexed
-            <input type="radio" value="Non_Indexed" name="IndexOfPublication" /></label>
+          <input type="radio" value="SCOPUS" name="IndexOfPublication" />
+
+          <label id='radio9label' >Web of Science</label>
+          <input type="radio" value="WOS" name="IndexOfPublication" />
+          <label id='radio9label' >UGC Care</label>
+          <input type="radio" value="UGC_Care" name="IndexOfPublication" />
+          <label id='radio9label' >Non Indexed</label>
+          <input type="radio" value="Non_Indexed" name="IndexOfPublication" />
         </div>
 
 
 
 
-        <label htmlFor=" Total Funded Amount">10. Total Funded Amount for Funded Projects/ Funded Seminars / Consultancy. For
+        <label id='contribution-label' htmlFor=" Total Funded Amount"> <strong>10 .</strong>  Total Funded Amount for Funded Projects/ Funded Seminars / Consultancy. For
           others, NA. <span class="required">*</span></label>
 
         <input type="text" id="Total Funded Amount " value={FundAmount} name="Total Funded Amount " onInput={(e) => setFundAmount(e.target.value)} required />
 
 
-        <label htmlFor="Role for Funded Projects">11. Role for Funded Projects/Funded Seminars/Consultancy/Patents/Papers
+        <label id='contribution-label' htmlFor="Role for Funded Projects"> <strong>11 .</strong> Role for Funded Projects/Funded Seminars/Consultancy/Patents/Papers
           /Books. For others,NA<span class="required">*</span></label>
 
 
-        <div className="radio">
+        <div className="dropdown">
           <select onChange={(e) => setContributionType(e.target.value)} value={ContributionType} name="contributionType">
             <option value="Project Investigator">Project Investigator</option>
             <option value="Co-Project Investigator">Co-Project Investigator</option>
@@ -254,26 +256,25 @@ const Faculty = () => {
 
 
 
-        <label>12. Present Status of Patents Only. For other, please choose NA.<span class="required">*</span></label>
+        <label id='contribution-label' > <strong>12 .</strong> Present Status of Patents Only. For other, please choose NA.<span class="required">*</span></label>
 
 
         <div className="radio-contributionsheet" onChange={(e) => setPresentStatusofPatentsOnly(e.target.value)}>
-          <label>Filed
-            <input type="radio" value="Filed" name="PresentStatusofPatentsOnly" /></label>
-          <label> Published
-            <input type="radio" value="Published" name="PresentStatusofPatentsOnly" /></label>
+          <label id='radio12label' >Filed</label>
+          <input type="radio" value="Filed" name="PresentStatusofPatentsOnly" />
+          <label id='radio12label' > Published</label>
+          <input type="radio" value="Published" name="PresentStatusofPatentsOnly" />
+          <label id='radio12label' >Granted</label>
 
-          <label>Granted
-
-            <input type="radio" value="Granted" name="PresentStatusofPatentsOnly" /></label>
-          <label>
-            NA
-            <input type="radio" value="NA" name="PresentStatusofPatentsOnly" /></label>
+          <input type="radio" value="Granted" name="PresentStatusofPatentsOnly" />
+          <label id='radio12label' >
+            NA</label>
+          <input type="radio" value="NA" name="PresentStatusofPatentsOnly" />
         </div>
 
 
 
-        <label htmlFor="  Share the link">13. Share the link for accessing your contribution online(Web URL for Papers,
+        <label id='contribution-label' htmlFor="  Share the link"> <strong>13 .</strong> Share the link for accessing your contribution online(Web URL for Papers,
           Patents, Awards, Books and Book Chapter. For other, please use NA.) <span class="required">*</span></label>
 
         <input type="text" id=" Share the link " value={ContributionUrl} name=" Share the link" onInput={(e) => setContributionUrl(e.target.value)} required />
@@ -284,7 +285,7 @@ const Faculty = () => {
 
 
 
-        <label htmlFor="Attach Official Grant Letter Copy for Funded Projects">14. Attach Official Grant Letter Copy for Funded Projects, Funded Seminars and
+        <label id='contribution-label' htmlFor="Attach Official Grant Letter Copy for Funded Projects"><strong>14.</strong> Attach Official Grant Letter Copy for Funded Projects, Funded Seminars and
           Consultancy. Attach the full published paper in PDF for Papers. Attach PDF
           Version of Book/Book Chapters for Books/Chapters. Attach the Patent Receipt
           and Grant Letters for Patents. Attach the copy of awards for awards /
@@ -292,9 +293,9 @@ const Faculty = () => {
         <input type="file" id="Attach Official Grant Letter Copy for Funded Projects" value={GrantLetterFile} name="Attach Official Grant Letter Copy for Funded Projects" onInput={(e) => setGrantLetterFile(e.target.value)} />
 
 
-        <center>
-          <button type="submit">Submit</button>
-        </center>
+        <div className='bottom-btn'>  <center>
+          <button type="submit" onSubmit >Submit</button>
+        </center></div>
       </form >
     </div>
 

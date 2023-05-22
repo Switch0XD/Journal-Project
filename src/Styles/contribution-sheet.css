@@ -4,9 +4,11 @@
    background: transparent;
    /* filter: blur(1px);
   -webkit-filter: blur(1px); */
-
-   background-color: #fff;
-   width: 70%;
+   border: 1.5px solid #c6e7f1;
+   border-radius: 10px;
+   background-color: transparent;
+   box-shadow: 0 10px 100px #63a4ff;
+   width: 90%;
    height: 50%;
    margin: auto;
    box-sizing: border-box;
@@ -15,27 +17,69 @@
    margin-top: 20px;
  }
 
+ center {
+   width: 50%;
+   margin: auto;
+   border-radius: 30px;
+
+ }
+
  .heading-sheet {
    padding-top: 40px;
  }
 
 
- #contribution-label,
- label {
+ #contribution-label {
+   margin: auto;
    font-size: large;
+   padding-right: 50px;
    justify-content: space-between;
    align-items: baseline;
    display: flex;
    flex-wrap: nowrap;
    direction: ltr;
    display: inline-table;
-   width: 70%;
-   text-align: center;
+   width: 50%;
+   text-align: justify;
    /* margin-right: 40px; */
    padding-top: 10px;
+   padding-left: 12%;
  }
 
 
+
+ #radio12label {
+   width: 20%;
+   display: -webkit-inline-box;
+
+ }
+
+
+ #radio9label {
+
+   padding-top: 20px;
+   width: 50%;
+   display: inline-block;
+ }
+
+ .dropdown {
+   display: inline;
+   width: 100px;
+
+ }
+
+ .radio-contributionsheet {
+   display: -webkit-inline-box;
+   width: 20%;
+
+   text-align: center;
+   padding-top: 0px;
+ }
+
+
+ .bottom-btn {
+   margin-top: 100px;
+ }
 
 
  input,
@@ -47,7 +91,7 @@
    font-size: 1rem;
    margin-top: 2rem;
    margin-right: auto;
-   width: 100px;
+   width: 24%;
 
  }
 
@@ -78,6 +122,7 @@
    margin: 3vh;
    height: 50px;
    width: 110px;
+   margin-top: 60px;
    margin-bottom: 10vh;
    border: none;
    padding: 0.5rem 1rem;
@@ -85,6 +130,7 @@
    font-size: 1.25rem;
    cursor: pointer;
    transition: 3s;
+   box-shadow: 0 10px 100px #0072b8
  }
 
  button[type="submit"]:hover {

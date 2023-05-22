@@ -69,6 +69,9 @@ publicationRouter.get("/publication/:id", async (req, res) => {
   res.send({ data: publication })
 })
 
+
+
+
 // Create publication data
 publicationRouter.post("/publication", publicationDataValidator, async (req, res) => {
   const data = req.body;
